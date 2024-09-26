@@ -1,0 +1,44 @@
+<script setup lang="ts">
+import BaseIcon from '@/components/base/BaseIcon.vue'
+import { cn } from '@/utils/cn'
+import baseButtonStyles from './styles'
+import type { ButtonColor, ButtonSize, ButtonVariant } from './types'
+
+interface BaseIconButtonProps {
+  color?: ButtonColor
+  icon: string
+  iconClass?: string
+  isLoading?: boolean
+  isDisabled?: boolean
+  variant?: ButtonVariant
+  size?: ButtonSize
+}
+
+const {
+  color = 'primary',
+  icon,
+  iconClass,
+  isLoading,
+  isDisabled,
+  variant = 'primary',
+  size = 'sm',
+} = defineProps<BaseIconButtonProps>()
+
+const sizeClass = cn({
+  'size-7': size === 'xs',
+  'size-8': size === 'sm',
+  'size-10': size === 'md',
+  'size-11': size === 'lg',
+})
+
+const classNames = baseButtonStyles(variant, color, [sizeClass, 'rounded-full'])
+</script>
+
+<template>
+  <button v-ripple :disabled="isDisabled || isLoading" :class="classNames">
+    <BaseIcon v-if="isLoading" name="gg:spinner" class="animate-spin" />
+    <BaseIcon v-if="!isLoading" :name="icon" :class="iconClass" />
+  </button>
+</template>
+
+<style scoped></style>
