@@ -10,7 +10,7 @@ const isDrawerOpen = defineModel<boolean>({ required: true })
   <BaseSheet v-model="isDrawerOpen">
     <div class="w-56">
       <DrawerLogo />
-      <DrawerMenu />
+      <DrawerMenu @click="isDrawerOpen = false" />
     </div>
   </BaseSheet>
 </template>

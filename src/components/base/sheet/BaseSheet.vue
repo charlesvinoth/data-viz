@@ -7,7 +7,7 @@ interface BaseSheetProps {
 
 const { position = 'left' } = defineProps<BaseSheetProps>()
 
-const model = defineModel<boolean>()
+const model = defineModel<boolean>({ default: false })
 </script>
 
 <template>

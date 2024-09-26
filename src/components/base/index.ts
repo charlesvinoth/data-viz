@@ -1,3 +1,5 @@
+import BaseMenu from '../menu/BaseMenu.vue'
+import BaseMenuItem from '../menu/BaseMenuItem.vue'
 import BaseComingSoon from './BaseComingSoon.vue'
 import BaseIcon from './BaseIcon.vue'
 import BasePingIndicator from './BasePingIndicator.vue'
@@ -12,6 +14,8 @@ export {
   BaseComingSoon,
   BaseIcon,
   BaseIconButton,
+  BaseMenu,
+  BaseMenuItem,
   BasePingIndicator,
   BaseSheet,
   BaseTabs,

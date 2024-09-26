@@ -49,13 +49,19 @@ const { isDrawerOpen = true } = defineProps<DrawerMenuProps>()
     <ul>
       <li v-for="menu in menus" :key="menu.label" class="mx-2.5 my-3">
         <DrawerMenuItem v-if="isDrawerOpen" :route="menu.route">
-          <DrawerMenuItemIcon :icon="menu.icon" :isActive="$route.path === menu.route" />
+          <DrawerMenuItemIcon
+            :icon="$route.path === menu.route ? menu.activeIcon : menu.icon"
+            :isActive="$route.path === menu.route"
+          />
           <DrawerMenuItemLabel :label="menu.label" :isActive="$route.path === menu.route" />
         </DrawerMenuItem>
 
-        <BaseTooltip v-else :content="menu.label" position="right" class="block">
+        <BaseTooltip v-else :content="menu.label" position="right">
           <DrawerMenuItem :route="menu.route">
-            <DrawerMenuItemIcon :icon="menu.icon" :isActive="$route.path === menu.route" />
+            <DrawerMenuItemIcon
+              :icon="$route.path === menu.route ? menu.activeIcon : menu.icon"
+              :isActive="$route.path === menu.route"
+            />
           </DrawerMenuItem>
         </BaseTooltip>
       </li>
