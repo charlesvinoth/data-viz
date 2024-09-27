@@ -10,7 +10,7 @@ import { Menu } from '@ark-ui/vue'
 
     <Menu.Positioner>
       <Menu.Content
-        class="space-y-2 rounded-md border border-gray-200 bg-white p-2 shadow-sm outline-none dark:border-gray-800 dark:bg-gray-900"
+        class="space-y-2 rounded-md bg-white p-2 shadow-sm outline-none ring-1 ring-gray-200 dark:bg-gray-900 dark:ring-gray-800"
       >
         <slot />
       </Menu.Content>
