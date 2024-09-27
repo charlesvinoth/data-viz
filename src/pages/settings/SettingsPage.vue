@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { BaseComingSoon } from '@/components/base'
+import { CComingSoon } from '@/components/cui'
 </script>
 
 <template>
   <div>
-    <BaseComingSoon />
+    <CComingSoon />
   </div>
 </template>
 

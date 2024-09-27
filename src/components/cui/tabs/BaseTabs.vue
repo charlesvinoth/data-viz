@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { Tabs } from '@ark-ui/vue'
 
-interface BaseTab {
+interface CTab {
   label: string
   value: string
   isDisabled?: boolean
   className?: string
 }
 
-interface BaseTabsProps {
-  tabs: BaseTab[]
+interface CTabsProps {
+  tabs: CTab[]
 }
 
 const model = defineModel<string>()
-defineProps<BaseTabsProps>()
+defineProps<CTabsProps>()
 </script>
 
 <template>

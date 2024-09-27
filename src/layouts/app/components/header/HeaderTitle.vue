@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BaseIconButton } from '@/components/base'
+import { CIconButton } from '@/components/cui'
 
 const isDrawerOpen = defineModel<boolean>('isDrawerOpen')
 const isDrawerXLOpen = defineModel<boolean>('isDrawerXLOpen')
@@ -7,13 +7,13 @@ const isDrawerXLOpen = defineModel<boolean>('isDrawerXLOpen')
 
 <template>
   <div class="flex items-center gap-2">
-    <BaseIconButton
+    <CIconButton
       icon="tabler:menu-3"
       variant="tertiary"
       class="xl:hidden"
       @click="isDrawerOpen = !isDrawerOpen"
     />
-    <BaseIconButton
+    <CIconButton
       icon="tabler:menu-3"
       variant="tertiary"
       class="hidden xl:flex"

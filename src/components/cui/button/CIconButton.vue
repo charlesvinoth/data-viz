@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import BaseIcon from '@/components/base/BaseIcon.vue'
+import { CIcon } from '@/components/cui'
 import { cn } from '@/utils/cn'
 import baseButtonStyles from './styles'
 import type { ButtonColor, ButtonSize, ButtonVariant } from './types'
 
-interface BaseIconButtonProps {
+interface CIconButtonProps {
   color?: ButtonColor
   icon: string
   iconClass?: string
@@ -22,7 +22,7 @@ const {
   isDisabled,
   variant = 'primary',
   size = 'sm',
-} = defineProps<BaseIconButtonProps>()
+} = defineProps<CIconButtonProps>()
 
 const sizeClass = cn({
   'size-7': size === 'xs',
@@ -36,8 +36,8 @@ const classNames = baseButtonStyles(variant, color, [sizeClass, 'rounded-full'])
 
 <template>
   <button v-ripple :disabled="isDisabled || isLoading" :class="classNames">
-    <BaseIcon v-if="isLoading" name="gg:spinner" class="animate-spin" />
-    <BaseIcon v-if="!isLoading" :name="icon" :class="iconClass" />
+    <CIcon v-if="isLoading" name="gg:spinner" class="animate-spin" />
+    <CIcon v-if="!isLoading" :name="icon" :class="iconClass" />
   </button>
 </template>
 

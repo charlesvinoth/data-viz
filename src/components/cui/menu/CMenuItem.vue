@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { Menu } from '@ark-ui/vue'
-import { BaseIcon } from '@/components/base'
+import { CIcon } from '@/components/cui'
 import { cn } from '@/utils/cn'
 
-interface BaseMenuItemProps {
+interface CMenuItemProps {
   label: string
   value: string
   icon?: string
   color?: 'default' | 'error'
 }
 
-const { label, value, icon, color = 'default' } = defineProps<BaseMenuItemProps>()
+const { label, value, icon, color = 'default' } = defineProps<CMenuItemProps>()
 
 const classNames = {
   root: cn(
@@ -32,7 +32,7 @@ const classNames = {
 
 <template>
   <Menu.Item :value="value" :class="classNames.root">
-    <BaseIcon v-if="icon" :name="icon" :class="classNames.icon" />
+    <CIcon v-if="icon" :name="icon" :class="classNames.icon" />
     <div :class="classNames.label">{{ label }}</div>
   </Menu.Item>
 </template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import Mark from '@/components/common/logo/Mark.vue'
-import { BaseButton } from '.'
+import { CButton, CMark } from '@/components/cui'
 </script>
 
 <template>
@@ -9,7 +8,7 @@ import { BaseButton } from '.'
     :style="{ height: 'calc(100vh - 56px)' }"
   >
     <div class="relative mb-6 size-24">
-      <Mark class="opacity-20" />
+      <CMark class="opacity-20" />
       <div class="absolute top-1 flex size-full items-center justify-center">
         <div class="size-14 rounded-full bg-primary-600 dark:bg-primary-400">
           <svg
@@ -44,7 +43,7 @@ import { BaseButton } from '.'
     <p class="text-center text-gray-600 dark:text-gray-400">
       The feature is in development. We will notify you when it is ready.
     </p>
-    <BaseButton label="Go back" class="mt-6" @click="$router.go(-1)" />
+    <CButton label="Go back" class="mt-6" @click="$router.go(-1)" />
   </div>
 </template>
 

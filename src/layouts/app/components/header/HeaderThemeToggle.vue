@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useDark, useToggle } from '@vueuse/core'
-import BaseIconButton from '@/components/base/button/BaseIconButton.vue'
+import { CIconButton } from '@/components/cui'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <BaseIconButton
+  <CIconButton
     variant="tertiary"
     :icon="isDark ? 'material-symbols:light-mode-outline' : 'material-symbols:dark-mode-outline'"
     @click="toggleDark()"

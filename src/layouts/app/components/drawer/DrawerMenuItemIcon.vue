@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BaseIcon } from '@/components/base'
+import { CIcon } from '@/components/cui'
 
 interface DrawerMenuIconProps {
   icon: string
@@ -11,7 +11,7 @@ defineProps<DrawerMenuIconProps>()
 </script>
 
 <template>
-  <BaseIcon
+  <CIcon
     :name="icon"
     class="shrink-0"
     :class="

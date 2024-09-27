@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Dialog } from '@ark-ui/vue'
 
-interface BaseSheetProps {
+interface CSheetProps {
   position?: 'left' | 'right'
 }
 
-const { position = 'left' } = defineProps<BaseSheetProps>()
+const { position = 'left' } = defineProps<CSheetProps>()
 
 const model = defineModel<boolean>({ default: false })
 </script>

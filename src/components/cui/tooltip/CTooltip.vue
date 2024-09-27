@@ -5,7 +5,7 @@ type Placement = 'end' | 'start'
 type Side = 'top' | 'right' | 'bottom' | 'left'
 type Position = Side | `${Side}-${Placement}`
 
-interface BaseTooltipProps {
+interface CTooltipProps {
   content: string
   color?: 'default' | 'primary' | 'success' | 'warning' | 'error'
   withArrow?: boolean
@@ -18,7 +18,7 @@ const {
   position = 'top',
   withArrow = true,
   gutter = 8,
-} = defineProps<BaseTooltipProps>()
+} = defineProps<CTooltipProps>()
 </script>
 
 <template>
