@@ -9,5 +9,7 @@ export interface CBarChartSeries {
 }
 
 export interface CBarChartProps {
+  isStacked?: boolean
   series: CBarChartSeries[]
+  trigger?: 'item' | 'axis'
 }

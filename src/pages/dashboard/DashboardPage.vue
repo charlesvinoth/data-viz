@@ -2,59 +2,76 @@
 import { CBarChart, type CBarChartSeries } from '@/components/cui'
 
 const barChartseries: CBarChartSeries[] = [
+  // {
+  //   name: '2018',
+  //   data: [
+  //     { x: 'January', y: 600 },
+  //     { x: 'February', y: 650 },
+  //     { x: 'March', y: 700 },
+  //     { x: 'April', y: 800 },
+  //     { x: 'May', y: 900 },
+  //     { x: 'June', y: 850 },
+  //     { x: 'July', y: 750 },
+  //     { x: 'August', y: 900 },
+  //     { x: 'September', y: 950 },
+  //     { x: 'October', y: 1050 },
+  //     { x: 'November', y: 1150 },
+  //     { x: 'December', y: 1200 },
+  //   ],
+  // },
+  // {
+  //   name: '2019',
+  //   data: [
+  //     { x: 'January', y: 400 },
+  //     { x: 'February', y: 450 },
+  //     { x: 'March', y: 500 },
+  //     { x: 'April', y: 600 },
+  //     { x: 'May', y: 700 },
+  //     { x: 'June', y: 550 },
+  //     { x: 'July', y: 500 },
+  //     { x: 'August', y: 600 },
+  //     { x: 'September', y: 700 },
+  //     { x: 'October', y: 800 },
+  //     { x: 'November', y: 900 },
+  //     { x: 'December', y: 950 },
+  //   ],
+  // },
+  // {
+  //   name: '2020',
+  //   data: [
+  //     { x: 'January', y: 500 },
+  //     { x: 'February', y: 550 },
+  //     { x: 'March', y: 600 },
+  //     { x: 'April', y: 650 },
+  //     { x: 'May', y: 700 },
+  //     { x: 'June', y: 600 },
+  //     { x: 'July', y: 550 },
+  //     { x: 'August', y: 700 },
+  //     { x: 'September', y: 750 },
+  //     { x: 'October', y: 850 },
+  //     { x: 'November', y: 900 },
+  //     { x: 'December', y: 1000 },
+  //   ],
+  // },
+  // {
+  //   name: '2021',
+  //   data: [
+  //     { x: 'January', y: 550 },
+  //     { x: 'February', y: 600 },
+  //     { x: 'March', y: 650 },
+  //     { x: 'April', y: 700 },
+  //     { x: 'May', y: 800 },
+  //     { x: 'June', y: 750 },
+  //     { x: 'July', y: 650 },
+  //     { x: 'August', y: 800 },
+  //     { x: 'September', y: 850 },
+  //     { x: 'October', y: 950 },
+  //     { x: 'November', y: 1050 },
+  //     { x: 'December', y: 1100 },
+  //   ],
+  // },
   {
-    name: '2019 Sales',
-    data: [
-      { x: 'January', y: 400 },
-      { x: 'February', y: 450 },
-      { x: 'March', y: 500 },
-      { x: 'April', y: 600 },
-      { x: 'May', y: 700 },
-      { x: 'June', y: 550 },
-      { x: 'July', y: 500 },
-      { x: 'August', y: 600 },
-      { x: 'September', y: 700 },
-      { x: 'October', y: 800 },
-      { x: 'November', y: 900 },
-      { x: 'December', y: 950 },
-    ],
-  },
-  {
-    name: '2020 Sales',
-    data: [
-      { x: 'January', y: 500 },
-      { x: 'February', y: 550 },
-      { x: 'March', y: 600 },
-      { x: 'April', y: 650 },
-      { x: 'May', y: 700 },
-      { x: 'June', y: 600 },
-      { x: 'July', y: 550 },
-      { x: 'August', y: 700 },
-      { x: 'September', y: 750 },
-      { x: 'October', y: 850 },
-      { x: 'November', y: 900 },
-      { x: 'December', y: 1000 },
-    ],
-  },
-  {
-    name: '2021 Sales',
-    data: [
-      { x: 'January', y: 550 },
-      { x: 'February', y: 600 },
-      { x: 'March', y: 650 },
-      { x: 'April', y: 700 },
-      { x: 'May', y: 800 },
-      { x: 'June', y: 750 },
-      { x: 'July', y: 650 },
-      { x: 'August', y: 800 },
-      { x: 'September', y: 850 },
-      { x: 'October', y: 950 },
-      { x: 'November', y: 1050 },
-      { x: 'December', y: 1100 },
-    ],
-  },
-  {
-    name: '2022 Sales',
+    name: '2022',
     data: [
       { x: 'January', y: 600 },
       { x: 'February', y: 650 },
@@ -71,7 +88,7 @@ const barChartseries: CBarChartSeries[] = [
     ],
   },
   {
-    name: '2023 Sales',
+    name: '2023',
     data: [
       { x: 'January', y: 650 },
       { x: 'February', y: 700 },
@@ -87,13 +104,33 @@ const barChartseries: CBarChartSeries[] = [
       { x: 'December', y: 1250 },
     ],
   },
+  {
+    name: '2024',
+    data: [
+      { x: 'January', y: 600 },
+      { x: 'February', y: 650 },
+      { x: 'March', y: 700 },
+      { x: 'April', y: 800 },
+      { x: 'May', y: 900 },
+      { x: 'June', y: 850 },
+      { x: 'July', y: 650 },
+      { x: 'August', y: 800 },
+      { x: 'September', y: 850 },
+      { x: 'October', y: 950 },
+      { x: 'November', y: 1050 },
+      { x: 'December', y: 1100 },
+    ],
+  },
 ]
 </script>
 
 <template>
-  <div class="flex items-center justify-center p-6">
-    <div class="h-96 w-full rounded-md bg-white p-4 dark:bg-gray-900">
-      <CBarChart :series="barChartseries" />
+  <div class="flex items-center justify-center p-4">
+    <div class="h-[32rem] w-full rounded-md bg-white p-4 dark:bg-gray-900">
+      <CBarChart
+        :series="barChartseries"
+        is-stacked
+      />
     </div>
   </div>
 </template>
