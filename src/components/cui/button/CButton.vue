@@ -5,16 +5,16 @@ import baseButtonStyles from './styles'
 import type { ButtonColor, ButtonSize, ButtonVariant } from './types'
 
 interface CButtonProps {
-  label: string
   color?: ButtonColor
   icon?: string
   iconClass?: string
+  isDisabled?: boolean
+  isLoading?: boolean
+  label: string
+  size?: ButtonSize
   suffixIcon?: string
   suffixIconClass?: string
-  isLoading?: boolean
-  isDisabled?: boolean
   variant?: ButtonVariant
-  size?: ButtonSize
 }
 
 const {
@@ -41,11 +41,27 @@ const classNames = baseButtonStyles(variant, color, [sizeClass])
 </script>
 
 <template>
-  <button v-ripple :disabled="isDisabled || isLoading" :class="classNames">
-    <CIcon v-if="isLoading" name="gg:spinner" class="animate-spin" />
-    <CIcon v-if="!isLoading && icon" :name="icon" :class="iconClass" />
+  <button
+    v-ripple
+    :disabled="isDisabled || isLoading"
+    :class="classNames"
+  >
+    <CIcon
+      v-if="isLoading"
+      name="gg:spinner"
+      class="animate-spin"
+    />
+    <CIcon
+      v-if="!isLoading && icon"
+      :name="icon"
+      :class="iconClass"
+    />
     {{ label }}
-    <CIcon v-if="!isLoading && suffixIcon" :name="suffixIcon" :class="suffixIconClass" />
+    <CIcon
+      v-if="!isLoading && suffixIcon"
+      :name="suffixIcon"
+      :class="suffixIconClass"
+    />
   </button>
 </template>
 

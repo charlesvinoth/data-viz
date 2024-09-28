@@ -9,7 +9,11 @@ defineProps<CIconProps>()
 </script>
 
 <template>
-  <Icon inline :icon="name" class="size-5" />
+  <Icon
+    inline
+    :icon="name"
+    class="size-5"
+  />
 </template>
 
 <style scoped></style>

@@ -24,11 +24,17 @@ const model = defineModel<boolean>({ default: false })
             'right-0 top-0 h-screen': position === 'right',
           }"
         >
-          <div v-if="model && position === 'left'" v-motion-slide-left>
+          <div
+            v-if="model && position === 'left'"
+            v-motion-slide-left
+          >
             <slot />
           </div>
 
-          <div v-if="model && position === 'right'" v-motion-slide-right>
+          <div
+            v-if="model && position === 'right'"
+            v-motion-slide-right
+          >
             <slot />
           </div>
         </Dialog.Content>

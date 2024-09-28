@@ -7,5 +7,6 @@
   "trailingComma": "all",
   "endOfLine": "lf",
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["cn", "cva"]
+  "tailwindFunctions": ["cn", "cva"],
+  "singleAttributePerLine": true
 }

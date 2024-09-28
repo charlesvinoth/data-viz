@@ -13,7 +13,10 @@ const isDrawerXLOpen = defineModel<boolean>('isDrawerXLOpen')
   <header
     class="flex h-14 items-center justify-between bg-white px-4 dark:bg-gray-900 xl:bg-transparent dark:xl:bg-transparent"
   >
-    <HeaderTitle v-model:isDrawerOpen="isDrawerOpen" v-model:isDrawerXLOpen="isDrawerXLOpen" />
+    <HeaderTitle
+      v-model:is-drawer-open="isDrawerOpen"
+      v-model:is-drawer-x-l-open="isDrawerXLOpen"
+    />
 
     <div class="flex items-center gap-2">
       <HeaderSearch />

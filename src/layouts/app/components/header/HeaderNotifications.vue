@@ -4,8 +4,14 @@ import { CIconButton, CPingIndicator } from '@/components/cui'
 
 <template>
   <div className="relative">
-    <CIconButton variant="tertiary" icon="material-symbols:notifications-outline-rounded" />
-    <CPingIndicator :top="2" :right="2" />
+    <CIconButton
+      variant="tertiary"
+      icon="material-symbols:notifications-outline-rounded"
+    />
+    <CPingIndicator
+      :top="2"
+      :right="2"
+    />
   </div>
 </template>
 

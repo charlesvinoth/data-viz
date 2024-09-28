@@ -30,11 +30,19 @@ const menus = [
   <div>
     <CMenu>
       <template #trigger>
-        <img :src="avatarImg" alt="user avatar" class="size-8 rounded-full" />
+        <img
+          :src="avatarImg"
+          alt="user avatar"
+          class="size-8 rounded-full"
+        />
       </template>
 
       <div class="flex items-center gap-3 p-2">
-        <img :src="avatarImg" alt="user avatar" class="size-10 rounded-full" />
+        <img
+          :src="avatarImg"
+          alt="user avatar"
+          class="size-10 rounded-full"
+        />
 
         <div>
           <p class="font-semibold text-gray-700 dark:text-gray-300">Charles Vinoth</p>

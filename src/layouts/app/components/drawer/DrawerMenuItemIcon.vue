@@ -2,9 +2,9 @@
 import { CIcon } from '@/components/cui'
 
 interface DrawerMenuIconProps {
+  color?: 'default' | 'error'
   icon: string
   isActive?: boolean
-  color?: 'default' | 'error'
 }
 
 defineProps<DrawerMenuIconProps>()

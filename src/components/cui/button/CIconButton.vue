@@ -8,10 +8,10 @@ interface CIconButtonProps {
   color?: ButtonColor
   icon: string
   iconClass?: string
-  isLoading?: boolean
   isDisabled?: boolean
-  variant?: ButtonVariant
+  isLoading?: boolean
   size?: ButtonSize
+  variant?: ButtonVariant
 }
 
 const {
@@ -35,9 +35,21 @@ const classNames = baseButtonStyles(variant, color, [sizeClass, 'rounded-full'])
 </script>
 
 <template>
-  <button v-ripple :disabled="isDisabled || isLoading" :class="classNames">
-    <CIcon v-if="isLoading" name="gg:spinner" class="animate-spin" />
-    <CIcon v-if="!isLoading" :name="icon" :class="iconClass" />
+  <button
+    v-ripple
+    :disabled="isDisabled || isLoading"
+    :class="classNames"
+  >
+    <CIcon
+      v-if="isLoading"
+      name="gg:spinner"
+      class="animate-spin"
+    />
+    <CIcon
+      v-if="!isLoading"
+      :name="icon"
+      :class="iconClass"
+    />
   </button>
 </template>
 

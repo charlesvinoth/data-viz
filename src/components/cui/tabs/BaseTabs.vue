@@ -2,10 +2,10 @@
 import { Tabs } from '@ark-ui/vue'
 
 interface CTab {
+  className?: string
+  isDisabled?: boolean
   label: string
   value: string
-  isDisabled?: boolean
-  className?: string
 }
 
 interface CTabsProps {

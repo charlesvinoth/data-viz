@@ -1,8 +1,8 @@
 <script setup lang="ts">
 interface DrawerMenuLabelProps {
-  label: string
-  isActive?: boolean
   color?: 'default' | 'error'
+  isActive?: boolean
+  label: string
 }
 
 defineProps<DrawerMenuLabelProps>()

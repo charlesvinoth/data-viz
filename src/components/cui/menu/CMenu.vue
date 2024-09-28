@@ -8,7 +8,7 @@ const onOpenChange = (details: MenuOpenChangeDetails) => (isMenuOpen.value = det
 </script>
 
 <template>
-  <Menu.Root :onOpenChange="onOpenChange">
+  <Menu.Root :on-open-change="onOpenChange">
     <Menu.Trigger class="outline-none">
       <slot name="trigger" />
     </Menu.Trigger>

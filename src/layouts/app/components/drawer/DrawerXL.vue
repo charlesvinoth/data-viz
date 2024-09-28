@@ -10,8 +10,8 @@ const isDrawerOpen = defineModel<boolean>({ required: true })
     class="fixed left-0 top-0 hidden h-screen bg-white transition-[width] duration-200 dark:bg-gray-900 xl:block"
     :class="isDrawerOpen ? 'w-56' : 'w-14'"
   >
-    <DrawerLogo :isDrawerOpen="isDrawerOpen" />
-    <DrawerMenu :isDrawerOpen="isDrawerOpen" />
+    <DrawerLogo :is-drawer-open="isDrawerOpen" />
+    <DrawerMenu :is-drawer-open="isDrawerOpen" />
   </div>
 </template>
 

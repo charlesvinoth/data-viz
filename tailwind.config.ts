@@ -2,15 +2,10 @@ import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
 export default {
-  darkMode: 'class',
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        bungee: ['Bungee', 'sans-serif'],
-      },
       colors: {
         primary: {
           50: '#F0F8FF',
@@ -63,7 +58,11 @@ export default {
         warning: colors.amber,
         error: colors.red,
       },
+      fontFamily: {
+        bungee: ['Bungee', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
-  plugins: [],
 } satisfies Config

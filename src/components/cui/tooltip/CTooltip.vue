@@ -6,11 +6,11 @@ type Side = 'top' | 'right' | 'bottom' | 'left'
 type Position = Side | `${Side}-${Placement}`
 
 interface CTooltipProps {
-  content: string
   color?: 'default' | 'primary' | 'success' | 'warning' | 'error'
-  withArrow?: boolean
-  position?: Position
+  content: string
   gutter?: number
+  position?: Position
+  withArrow?: boolean
 }
 
 const {
@@ -23,8 +23,8 @@ const {
 
 <template>
   <Tooltip.Root
-    :openDelay="200"
-    :closeDelay="100"
+    :open-delay="200"
+    :close-delay="100"
     :positioning="{
       placement: position,
       gutter,

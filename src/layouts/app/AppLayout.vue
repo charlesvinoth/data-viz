@@ -17,7 +17,10 @@ const isDrawerXLOpen = ref(false)
     class="transition-[margin] duration-200 ease-in-out"
     :class="isDrawerXLOpen ? 'xl:ml-56' : 'xl:ml-14'"
   >
-    <Header v-model:isDrawerOpen="isDrawerOpen" v-model:isDrawerXLOpen="isDrawerXLOpen" />
+    <Header
+      v-model:is-drawer-open="isDrawerOpen"
+      v-model:is-drawer-x-l-open="isDrawerXLOpen"
+    />
     <RouterView />
   </div>
 </template>

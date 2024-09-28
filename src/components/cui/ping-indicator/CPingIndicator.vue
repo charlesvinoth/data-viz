@@ -2,9 +2,9 @@
 import { cn } from '@/utils/cn'
 
 interface PingIndicatorProps {
-  top?: number
-  right?: number
   color?: 'primary' | 'success' | 'warning' | 'error'
+  right?: number
+  top?: number
 }
 
 const { top = 0, right = 0, color = 'primary' } = defineProps<PingIndicatorProps>()
@@ -23,8 +23,14 @@ const classNames = {
 </script>
 
 <template>
-  <span :class="classNames.outer" :style="{ right: `${right}px`, top: `${top}px` }" />
-  <span :class="classNames.inner" :style="{ right: `${right}px`, top: `${top}px` }" />
+  <span
+    :class="classNames.outer"
+    :style="{ right: `${right}px`, top: `${top}px` }"
+  />
+  <span
+    :class="classNames.inner"
+    :style="{ right: `${right}px`, top: `${top}px` }"
+  />
 </template>
 
 <style scoped></style>
