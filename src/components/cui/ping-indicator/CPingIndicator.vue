@@ -7,7 +7,7 @@ interface PingIndicatorProps {
   top?: number
 }
 
-const { top = 0, right = 0, color = 'primary' } = defineProps<PingIndicatorProps>()
+const { color = 'primary', right = 0, top = 0 } = defineProps<PingIndicatorProps>()
 
 const colorClassNames = cn({
   'bg-primary-600 dark:bg-primary-400': color === 'primary',

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CButton, CMark } from '@/components/cui'
+import { CButton, CLogoMark } from '@/components/cui'
 </script>
 
 <template>
@@ -8,9 +8,11 @@ import { CButton, CMark } from '@/components/cui'
     :style="{ height: 'calc(100vh - 56px)' }"
   >
     <div class="relative mb-6 size-24">
-      <CMark class="opacity-20" />
+      <CLogoMark class="opacity-20" />
       <div class="absolute top-1 flex size-full items-center justify-center">
         <div class="size-14 rounded-full bg-primary-600 dark:bg-primary-400">
+          <!-- animated clock icon -->
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -49,6 +51,8 @@ import { CButton, CMark } from '@/components/cui'
               />
             </rect>
           </svg>
+
+          <!-- *** -->
         </div>
       </div>
     </div>

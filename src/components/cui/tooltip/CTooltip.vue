@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from '@ark-ui/vue'
+import { cn } from '@/utils/cn'
 
 type Placement = 'end' | 'start'
 type Side = 'top' | 'right' | 'bottom' | 'left'
@@ -15,10 +16,30 @@ interface CTooltipProps {
 
 const {
   color = 'default',
+  gutter = 8,
   position = 'top',
   withArrow = true,
-  gutter = 8,
 } = defineProps<CTooltipProps>()
+
+const classNames = {
+  content: cn(
+    'text-balance rounded-md px-3 py-1.5 text-xs font-medium text-white dark:text-black',
+    {
+      'bg-gray-900 dark:bg-white': color === 'default',
+      'bg-primary-600 dark:bg-primary-400': color === 'primary',
+      'bg-error-600 dark:bg-error-400': color === 'error',
+      'bg-success-600 dark:bg-success-400': color === 'success',
+      'bg-warning-600 dark:bg-warning-400': color === 'warning',
+    },
+  ),
+  arrow: cn('!bg-current', {
+    'text-gray-900 dark:text-white': color === 'default',
+    'text-primary-600 dark:text-primary-400': color === 'primary',
+    'text-error-600 dark:text-error-400': color === 'error',
+    'text-success-600 dark:text-success-400': color === 'success',
+    'text-warning-600 dark:text-warning-400': color === 'warning',
+  }),
+}
 </script>
 
 <template>
@@ -35,27 +56,9 @@ const {
     </Tooltip.Trigger>
 
     <Tooltip.Positioner>
-      <Tooltip.Content
-        class="text-balance rounded-md px-3 py-1.5 text-xs font-medium text-white dark:text-black"
-        :class="{
-          'bg-gray-900 dark:bg-white': color === 'default',
-          'bg-primary-600 dark:bg-primary-400': color === 'primary',
-          'bg-error-600 dark:bg-error-400': color === 'error',
-          'bg-success-600 dark:bg-success-400': color === 'success',
-          'bg-warning-600 dark:bg-warning-400': color === 'warning',
-        }"
-      >
+      <Tooltip.Content :class="classNames.content">
         <Tooltip.Arrow v-if="withArrow">
-          <Tooltip.ArrowTip
-            :class="{
-              'text-gray-900 dark:text-white': color === 'default',
-              'text-primary-600 dark:text-primary-400': color === 'primary',
-              'text-error-600 dark:text-error-400': color === 'error',
-              'text-success-600 dark:text-success-400': color === 'success',
-              'text-warning-600 dark:text-warning-400': color === 'warning',
-            }"
-            :style="{ background: 'currentColor' }"
-          />
+          <Tooltip.ArrowTip :class="classNames.arrow" />
         </Tooltip.Arrow>
 
         {{ content }}

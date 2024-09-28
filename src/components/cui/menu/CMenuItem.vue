@@ -10,9 +10,12 @@ interface CMenuItemProps {
   value: string
 }
 
-const { label, value, icon, color = 'default' } = defineProps<CMenuItemProps>()
+const { color = 'default', icon, label, value } = defineProps<CMenuItemProps>()
 
 const classNames = {
+  root: cn(
+    'group flex cursor-pointer items-center gap-2 rounded-md p-2 font-medium outline-none transition-colors duration-200 ease-in-out hover:bg-gray-100 focus-visible:outline-primary-600 data-[highlighted]:bg-gray-100 dark:hover:bg-gray-800 dark:focus-visible:outline-primary-400 dark:data-[highlighted]:bg-gray-800',
+  ),
   icon: cn('shrink-0 text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-400', {
     'text-error-600 group-hover:text-error-600 dark:text-error-400 dark:group-hover:text-error-400':
       color === 'error',
@@ -23,9 +26,6 @@ const classNames = {
       'text-error-600 group-hover:text-error-600 dark:text-error-400 dark:group-hover:text-error-400':
         color === 'error',
     },
-  ),
-  root: cn(
-    'group flex cursor-pointer items-center gap-2 rounded-md p-2 font-medium outline-none transition-colors duration-200 ease-in-out hover:bg-gray-100 focus-visible:outline-primary-600 data-[highlighted]:bg-gray-100 dark:hover:bg-gray-800 dark:focus-visible:outline-primary-400 dark:data-[highlighted]:bg-gray-800',
   ),
 }
 </script>

@@ -18,16 +18,16 @@ interface CButtonProps {
 }
 
 const {
-  label,
   color = 'primary',
   icon,
   iconClass,
+  isDisabled,
+  isLoading,
+  label,
+  size = 'sm',
   suffixIcon,
   suffixIconClass,
-  isLoading,
-  isDisabled,
   variant = 'primary',
-  size = 'sm',
 } = defineProps<CButtonProps>()
 
 const sizeClass = cn({

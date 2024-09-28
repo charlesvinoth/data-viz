@@ -18,10 +18,10 @@ const {
   color = 'primary',
   icon,
   iconClass,
-  isLoading,
   isDisabled,
-  variant = 'primary',
+  isLoading,
   size = 'sm',
+  variant = 'primary',
 } = defineProps<CIconButtonProps>()
 
 const sizeClass = cn({
