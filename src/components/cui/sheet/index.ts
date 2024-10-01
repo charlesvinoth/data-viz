@@ -1,3 +1,3 @@
-import CSheet from './CSheet.vue'
+import Sheet from './Sheet.vue'
 
-export { CSheet }
+export { Sheet }

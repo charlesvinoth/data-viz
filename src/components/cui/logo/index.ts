@@ -1,4 +1,4 @@
-import CLogo from './CLogo.vue'
-import CLogoMark from './CLogoMark.vue'
+import Logo from './Logo.vue'
+import LogoMark from './LogoMark.vue'
 
-export { CLogo, CLogoMark }
+export { Logo, LogoMark }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CSheet } from '@/components/cui'
+import { Sheet } from '@/components/cui'
 import DrawerLogo from './DrawerLogo.vue'
 import DrawerMenu from './DrawerMenu.vue'
 
@@ -7,12 +7,12 @@ const isDrawerOpen = defineModel<boolean>({ required: true })
 </script>
 
 <template>
-  <CSheet v-model="isDrawerOpen">
+  <Sheet v-model="isDrawerOpen">
     <div class="w-56">
       <DrawerLogo />
       <DrawerMenu @click="isDrawerOpen = false" />
     </div>
-  </CSheet>
+  </Sheet>
 </template>
 
 <style scoped></style>

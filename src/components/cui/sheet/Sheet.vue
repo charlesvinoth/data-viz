@@ -2,11 +2,11 @@
 import { Dialog } from '@ark-ui/vue'
 import { cn } from '@/utils/cn'
 
-interface CSheetProps {
+interface SheetProps {
   position?: 'left' | 'right'
 }
 
-const { position = 'left' } = defineProps<CSheetProps>()
+const { position = 'left' } = defineProps<SheetProps>()
 
 const model = defineModel<boolean>({ default: false })
 

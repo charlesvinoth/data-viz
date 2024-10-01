@@ -1,3 +1,3 @@
-import CPingIndicator from './CPingIndicator.vue'
+import PingIndicator from './PingIndicator.vue'
 
-export { CPingIndicator }
+export { PingIndicator }

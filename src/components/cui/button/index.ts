@@ -1,4 +1,4 @@
-import CButton from './CButton.vue'
-import CIconButton from './CIconButton.vue'
+import Button from './Button.vue'
+import IconButton from './IconButton.vue'
 
-export { CButton, CIconButton }
+export { Button, IconButton }

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { CIconButton } from '@/components/cui'
+import { IconButton } from '@/components/cui'
 </script>
 
 <template>
-  <CIconButton
+  <IconButton
     variant="tertiary"
     icon="eva:search-outline"
   />

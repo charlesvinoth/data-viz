@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 
-interface CIconProps {
+interface IconProps {
   name: string
 }
 
-defineProps<CIconProps>()
+defineProps<IconProps>()
 </script>
 
 <template>

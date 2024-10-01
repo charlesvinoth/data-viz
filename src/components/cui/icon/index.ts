@@ -1,3 +1,3 @@
-import CIcon from './CIcon.vue'
+import Icon from './Icon.vue'
 
-export { CIcon }
+export { Icon }

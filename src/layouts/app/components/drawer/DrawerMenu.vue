@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CTooltip } from '@/components/cui'
+import { Tooltip } from '@/components/cui'
 import DrawerMenuItem from './DrawerMenuItem.vue'
 import DrawerMenuItemIcon from './DrawerMenuItemIcon.vue'
 import DrawerMenuItemLabel from './DrawerMenuItemLabel.vue'
@@ -70,7 +70,7 @@ const { isDrawerOpen = true } = defineProps<DrawerMenuProps>()
           />
         </DrawerMenuItem>
 
-        <CTooltip
+        <Tooltip
           v-else
           :content="menu.label"
           position="right"
@@ -81,7 +81,7 @@ const { isDrawerOpen = true } = defineProps<DrawerMenuProps>()
               :is-active="$route.path === menu.route"
             />
           </DrawerMenuItem>
-        </CTooltip>
+        </Tooltip>
       </li>
 
       <div class="flex-1" />
@@ -102,7 +102,7 @@ const { isDrawerOpen = true } = defineProps<DrawerMenuProps>()
           />
         </DrawerMenuItem>
 
-        <CTooltip
+        <Tooltip
           v-else
           content="Log Out"
           position="right"
@@ -113,7 +113,7 @@ const { isDrawerOpen = true } = defineProps<DrawerMenuProps>()
               color="error"
             />
           </DrawerMenuItem>
-        </CTooltip>
+        </Tooltip>
       </li>
     </ul>
   </nav>

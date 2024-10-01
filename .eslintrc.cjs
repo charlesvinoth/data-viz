@@ -7,7 +7,6 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier',
-    'plugin:typescript-sort-keys/recommended',
   ],
   parserOptions: {
     ecmaVersion: 'latest',

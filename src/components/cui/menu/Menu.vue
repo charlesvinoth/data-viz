@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Menu, type MenuOpenChangeDetails } from '@ark-ui/vue'
 import { ref } from 'vue'
+import MenuContent from './MenuContent.vue'
 
 const isMenuOpen = ref(false)
 
@@ -13,15 +14,11 @@ const onOpenChange = (details: MenuOpenChangeDetails) => (isMenuOpen.value = det
       <slot name="trigger" />
     </Menu.Trigger>
 
-    <Menu.Positioner>
-      <Menu.Content
-        v-if="isMenuOpen"
-        v-motion-fade
-        class="z-30 space-y-2 rounded-md bg-white p-2 shadow-sm outline-none ring-1 ring-gray-200 dark:bg-gray-900 dark:ring-gray-800"
-      >
+    <MenuContent v-if="isMenuOpen">
+      <template #default>
         <slot />
-      </Menu.Content>
-    </Menu.Positioner>
+      </template>
+    </MenuContent>
   </Menu.Root>
 </template>
 

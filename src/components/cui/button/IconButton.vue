@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { CIcon } from '@/components/cui'
+import { Icon } from '@/components/cui'
 import { cn } from '@/utils/cn'
 import baseButtonStyles from './styles'
 import type { ButtonColor, ButtonSize, ButtonVariant } from './types'
 
-interface CIconButtonProps {
+interface IconButtonProps {
   color?: ButtonColor
   icon: string
   iconClass?: string
@@ -22,7 +22,7 @@ const {
   isLoading,
   size = 'sm',
   variant = 'primary',
-} = defineProps<CIconButtonProps>()
+} = defineProps<IconButtonProps>()
 
 const sizeClass = cn({
   'size-7': size === 'xs',
@@ -40,12 +40,12 @@ const classNames = baseButtonStyles(variant, color, [sizeClass, 'rounded-full'])
     :disabled="isDisabled || isLoading"
     :class="classNames"
   >
-    <CIcon
+    <Icon
       v-if="isLoading"
       name="gg:spinner"
       class="animate-spin"
     />
-    <CIcon
+    <Icon
       v-if="!isLoading"
       :name="icon"
       :class="iconClass"

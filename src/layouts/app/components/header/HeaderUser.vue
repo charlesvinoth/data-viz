@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import avatarImg from '@/assets/avatar.png'
-import { CMenu, CMenuItem, CMenuSeparator } from '@/components/cui'
+import { Menu, MenuItem, MenuSeparator } from '@/components/cui'
 
 const menus = [
   {
@@ -28,7 +28,7 @@ const menus = [
 
 <template>
   <div>
-    <CMenu>
+    <Menu>
       <template #trigger>
         <img
           :src="avatarImg"
@@ -50,9 +50,9 @@ const menus = [
         </div>
       </div>
 
-      <CMenuSeparator />
+      <MenuSeparator />
 
-      <CMenuItem
+      <MenuItem
         v-for="menu in menus"
         :key="menu.value"
         :value="menu.value"
@@ -60,15 +60,15 @@ const menus = [
         :icon="menu.icon"
       />
 
-      <CMenuSeparator />
+      <MenuSeparator />
 
-      <CMenuItem
+      <MenuItem
         value="logOut"
         label="Log Out"
         icon="material-symbols:logout-rounded"
         color="error"
       />
-    </CMenu>
+    </Menu>
   </div>
 </template>
 

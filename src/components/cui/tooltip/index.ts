@@ -1,3 +1,3 @@
-import CTooltip from './CTooltip.vue'
+import Tooltip from './Tooltip.vue'
 
-export { CTooltip }
+export { Tooltip }

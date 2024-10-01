@@ -1,137 +1,147 @@
 <script setup lang="ts">
-import { CBarChart, type CBarChartSeries } from '@/components/cui'
+import { BarChart, type BarChartSeries } from '@/components/cui'
 
-const barChartseries: CBarChartSeries[] = [
+const barChartseries: BarChartSeries[] = [
   // {
   //   name: '2018',
   //   data: [
-  //     { x: 'January', y: 600 },
-  //     { x: 'February', y: 650 },
-  //     { x: 'March', y: 700 },
-  //     { x: 'April', y: 800 },
+  //     { x: 'Jan', y: 600 },
+  //     { x: 'Feb', y: 650 },
+  //     { x: 'Mar', y: 700 },
+  //     { x: 'Apr', y: 800 },
   //     { x: 'May', y: 900 },
-  //     { x: 'June', y: 850 },
-  //     { x: 'July', y: 750 },
-  //     { x: 'August', y: 900 },
-  //     { x: 'September', y: 950 },
-  //     { x: 'October', y: 1050 },
-  //     { x: 'November', y: 1150 },
-  //     { x: 'December', y: 1200 },
+  //     { x: 'Jun', y: 850 },
+  //     { x: 'Jul', y: 750 },
+  //     { x: 'Aug', y: 900 },
+  //     { x: 'Sep', y: 950 },
+  //     { x: 'Oct', y: 1050 },
+  //     { x: 'Nov', y: 1150 },
+  //     { x: 'Dec', y: 1200 },
   //   ],
   // },
   // {
   //   name: '2019',
   //   data: [
-  //     { x: 'January', y: 400 },
-  //     { x: 'February', y: 450 },
-  //     { x: 'March', y: 500 },
-  //     { x: 'April', y: 600 },
+  //     { x: 'Jan', y: 400 },
+  //     { x: 'Feb', y: 450 },
+  //     { x: 'Mar', y: 500 },
+  //     { x: 'Apr', y: 600 },
   //     { x: 'May', y: 700 },
-  //     { x: 'June', y: 550 },
-  //     { x: 'July', y: 500 },
-  //     { x: 'August', y: 600 },
-  //     { x: 'September', y: 700 },
-  //     { x: 'October', y: 800 },
-  //     { x: 'November', y: 900 },
-  //     { x: 'December', y: 950 },
+  //     { x: 'Jun', y: 550 },
+  //     { x: 'Jul', y: 500 },
+  //     { x: 'Aug', y: 600 },
+  //     { x: 'Sep', y: 700 },
+  //     { x: 'Oct', y: 800 },
+  //     { x: 'Nov', y: 900 },
+  //     { x: 'Dec', y: 950 },
   //   ],
   // },
   // {
   //   name: '2020',
   //   data: [
-  //     { x: 'January', y: 500 },
-  //     { x: 'February', y: 550 },
-  //     { x: 'March', y: 600 },
-  //     { x: 'April', y: 650 },
+  //     { x: 'Jan', y: 500 },
+  //     { x: 'Feb', y: 550 },
+  //     { x: 'Mar', y: 600 },
+  //     { x: 'Apr', y: 650 },
   //     { x: 'May', y: 700 },
-  //     { x: 'June', y: 600 },
-  //     { x: 'July', y: 550 },
-  //     { x: 'August', y: 700 },
-  //     { x: 'September', y: 750 },
-  //     { x: 'October', y: 850 },
-  //     { x: 'November', y: 900 },
-  //     { x: 'December', y: 1000 },
+  //     { x: 'Jun', y: 600 },
+  //     { x: 'Jul', y: 550 },
+  //     { x: 'Aug', y: 700 },
+  //     { x: 'Sep', y: 750 },
+  //     { x: 'Oct', y: 850 },
+  //     { x: 'Nov', y: 900 },
+  //     { x: 'Dec', y: 1000 },
   //   ],
   // },
   // {
   //   name: '2021',
   //   data: [
-  //     { x: 'January', y: 550 },
-  //     { x: 'February', y: 600 },
-  //     { x: 'March', y: 650 },
-  //     { x: 'April', y: 700 },
+  //     { x: 'Jan', y: 550 },
+  //     { x: 'Feb', y: 600 },
+  //     { x: 'Mar', y: 650 },
+  //     { x: 'Apr', y: 700 },
   //     { x: 'May', y: 800 },
-  //     { x: 'June', y: 750 },
-  //     { x: 'July', y: 650 },
-  //     { x: 'August', y: 800 },
-  //     { x: 'September', y: 850 },
-  //     { x: 'October', y: 950 },
-  //     { x: 'November', y: 1050 },
-  //     { x: 'December', y: 1100 },
+  //     { x: 'Jun', y: 750 },
+  //     { x: 'Jul', y: 650 },
+  //     { x: 'Aug', y: 800 },
+  //     { x: 'Sep', y: 850 },
+  //     { x: 'Oct', y: 950 },
+  //     { x: 'Nov', y: 1050 },
+  //     { x: 'Dec', y: 1100 },
+  //   ],
+  // },
+  // {
+  //   name: '2022',
+  //   data: [
+  //     { x: 'Jan', y: 600 },
+  //     { x: 'Feb', y: 650 },
+  //     { x: 'Mar', y: 700 },
+  //     { x: 'Apr', y: 800 },
+  //     { x: 'May', y: 900 },
+  //     { x: 'Jun', y: 850 },
+  //     { x: 'Jul', y: 750 },
+  //     { x: 'Aug', y: 900 },
+  //     { x: 'Sep', y: 950 },
+  //     { x: 'Oct', y: 1050 },
+  //     { x: 'Nov', y: 1150 },
+  //     { x: 'Dec', y: 1200 },
   //   ],
   // },
   {
-    name: '2022',
-    data: [
-      { x: 'January', y: 600 },
-      { x: 'February', y: 650 },
-      { x: 'March', y: 700 },
-      { x: 'April', y: 800 },
-      { x: 'May', y: 900 },
-      { x: 'June', y: 850 },
-      { x: 'July', y: 750 },
-      { x: 'August', y: 900 },
-      { x: 'September', y: 950 },
-      { x: 'October', y: 1050 },
-      { x: 'November', y: 1150 },
-      { x: 'December', y: 1200 },
-    ],
-  },
-  {
     name: '2023',
     data: [
-      { x: 'January', y: 650 },
-      { x: 'February', y: 700 },
-      { x: 'March', y: 750 },
-      { x: 'April', y: 850 },
+      { x: 'Jan', y: 650 },
+      { x: 'Feb', y: 700 },
+      { x: 'Mar', y: 750 },
+      { x: 'Apr', y: 850 },
       { x: 'May', y: 950 },
-      { x: 'June', y: 900 },
-      { x: 'July', y: 800 },
-      { x: 'August', y: 950 },
-      { x: 'September', y: 1000 },
-      { x: 'October', y: 1100 },
-      { x: 'November', y: 1200 },
-      { x: 'December', y: 1250 },
+      { x: 'Jun', y: 900 },
+      { x: 'Jul', y: 800 },
+      { x: 'Aug', y: 950 },
+      { x: 'Sep', y: 1000 },
+      { x: 'Oct', y: 1100 },
+      { x: 'Nov', y: 1200 },
+      { x: 'Dec', y: 1250 },
     ],
   },
   {
     name: '2024',
     data: [
-      { x: 'January', y: 600 },
-      { x: 'February', y: 650 },
-      { x: 'March', y: 700 },
-      { x: 'April', y: 800 },
+      { x: 'Jan', y: 600 },
+      { x: 'Feb', y: 650 },
+      { x: 'Mar', y: 700 },
+      { x: 'Apr', y: 800 },
       { x: 'May', y: 900 },
-      { x: 'June', y: 850 },
-      { x: 'July', y: 650 },
-      { x: 'August', y: 800 },
-      { x: 'September', y: 850 },
-      { x: 'October', y: 950 },
-      { x: 'November', y: 1050 },
-      { x: 'December', y: 1100 },
+      { x: 'Jun', y: 850 },
+      { x: 'Jul', y: 650 },
+      { x: 'Aug', y: 800 },
+      { x: 'Sep', y: 850 },
+      { x: 'Oct', y: 950 },
+      { x: 'Nov', y: 1050 },
+      { x: 'Dec', y: 1100 },
     ],
   },
 ]
 </script>
 
 <template>
-  <div class="flex items-center justify-center p-4">
-    <div class="h-[32rem] w-full rounded-md bg-white p-4 dark:bg-gray-900">
-      <CBarChart
-        :series="barChartseries"
-        is-stacked
-      />
-    </div>
+  <div class="p-4">
+    <BarChart
+      title="Sales report"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      :series="barChartseries"
+      :height="360"
+      orientation="vertical"
+      :mark-lines="[
+        {
+          name: 'Target',
+          value: 750,
+        },
+      ]"
+      :show-legend="true"
+      :show-x-axis-split-lines="true"
+      :show-y-axis-split-lines="true"
+    />
   </div>
 </template>
 

@@ -6,7 +6,7 @@ type Placement = 'end' | 'start'
 type Side = 'top' | 'right' | 'bottom' | 'left'
 type Position = Side | `${Side}-${Placement}`
 
-interface CTooltipProps {
+interface TooltipProps {
   color?: 'default' | 'primary' | 'success' | 'warning' | 'error'
   content: string
   gutter?: number
@@ -19,7 +19,7 @@ const {
   gutter = 8,
   position = 'top',
   withArrow = true,
-} = defineProps<CTooltipProps>()
+} = defineProps<TooltipProps>()
 
 const classNames = {
   content: cn(

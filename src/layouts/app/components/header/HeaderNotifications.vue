@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { CIconButton, CPingIndicator } from '@/components/cui'
+import { IconButton, PingIndicator } from '@/components/cui'
 </script>
 
 <template>
   <div className="relative">
-    <CIconButton
+    <IconButton
       variant="tertiary"
       icon="material-symbols:notifications-outline-rounded"
     />
-    <CPingIndicator
+    <PingIndicator
       :top="2"
       :right="2"
     />

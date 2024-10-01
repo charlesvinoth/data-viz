@@ -1,3 +1,3 @@
-import CComingSoon from './CComingSoon.vue'
+import ComingSoon from './ComingSoon.vue'
 
-export { CComingSoon }
+export { ComingSoon }
