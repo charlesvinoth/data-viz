@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconButton } from '@/components/cui'
+import { IconButton } from '@/components/lib'
 </script>
 
 <template>

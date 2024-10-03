@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import avatarImg from '@/assets/avatar.png'
-import { Menu, MenuItem, MenuSeparator } from '@/components/cui'
+import { Menu, MenuItem, MenuSeparator } from '@/components/lib'
 
 const menus = [
   {

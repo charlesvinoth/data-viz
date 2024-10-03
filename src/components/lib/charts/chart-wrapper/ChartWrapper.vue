@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useFullscreen } from '@vueuse/core'
 import { ref } from 'vue'
-import { IconButton } from '@/components/cui'
+import { IconButton } from '@/components/lib'
 import { cn } from '@/utils/cn'
 import downloadChartAsImage from '@/utils/downloadChartAsImage'
 import ChartWrapperMenu from './ChartWrapperMenu.vue'

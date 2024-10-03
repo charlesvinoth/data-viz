@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, LogoMark } from '@/components/cui'
+import { Button, LogoMark } from '@/components/lib'
 </script>
 
 <template>

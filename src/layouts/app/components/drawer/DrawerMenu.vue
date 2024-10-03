@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Tooltip } from '@/components/cui'
+import { ScrollArea, Tooltip } from '@/components/lib'
 import DrawerMenuItem from './DrawerMenuItem.vue'
 import DrawerMenuItemIcon from './DrawerMenuItemIcon.vue'
 import DrawerMenuItemLabel from './DrawerMenuItemLabel.vue'
@@ -45,78 +45,77 @@ const { isDrawerOpen = true } = defineProps<DrawerMenuProps>()
 </script>
 
 <template>
-  <nav className="mt-4">
-    <ul
-      class="flex flex-col gap-y-3"
-      :style="{ height: 'calc(100vh - 80px)' }"
-    >
-      <li
-        v-for="menu in menus"
-        :key="menu.label"
-        class="mx-2.5"
-      >
-        <DrawerMenuItem
-          v-if="isDrawerOpen"
-          :route="menu.route"
+  <ScrollArea height="calc(100vh - 72px)">
+    <nav class="h-full pb-4">
+      <ul class="flex h-full flex-col gap-y-3">
+        <li
+          v-for="menu in menus"
+          :key="menu.label"
+          class="mx-2.5"
         >
-          <DrawerMenuItemIcon
-            :icon="$route.path === menu.route ? menu.activeIcon : menu.icon"
-            :is-active="$route.path === menu.route"
-          />
-          <DrawerMenuItemLabel
-            v-motion-fade
-            :label="menu.label"
-            :is-active="$route.path === menu.route"
-          />
-        </DrawerMenuItem>
-
-        <Tooltip
-          v-else
-          :content="menu.label"
-          position="right"
-        >
-          <DrawerMenuItem :route="menu.route">
+          <DrawerMenuItem
+            v-if="isDrawerOpen"
+            :route="menu.route"
+          >
             <DrawerMenuItemIcon
               :icon="$route.path === menu.route ? menu.activeIcon : menu.icon"
               :is-active="$route.path === menu.route"
             />
+            <DrawerMenuItemLabel
+              v-motion-fade
+              :label="menu.label"
+              :is-active="$route.path === menu.route"
+            />
           </DrawerMenuItem>
-        </Tooltip>
-      </li>
 
-      <div class="flex-1" />
+          <Tooltip
+            v-else
+            :content="menu.label"
+            position="right"
+          >
+            <DrawerMenuItem :route="menu.route">
+              <DrawerMenuItemIcon
+                :icon="$route.path === menu.route ? menu.activeIcon : menu.icon"
+                :is-active="$route.path === menu.route"
+              />
+            </DrawerMenuItem>
+          </Tooltip>
+        </li>
 
-      <li class="mx-2.5">
-        <DrawerMenuItem
-          v-if="isDrawerOpen"
-          route="/login"
-        >
-          <DrawerMenuItemIcon
-            icon="material-symbols:logout-rounded"
-            color="error"
-          />
-          <DrawerMenuItemLabel
-            v-motion-fade
-            label="Log Out"
-            color="error"
-          />
-        </DrawerMenuItem>
+        <div class="min-h-10 flex-1" />
 
-        <Tooltip
-          v-else
-          content="Log Out"
-          position="right"
-        >
-          <DrawerMenuItem route="/login">
+        <li class="mx-2.5">
+          <DrawerMenuItem
+            v-if="isDrawerOpen"
+            route="/login"
+          >
             <DrawerMenuItemIcon
               icon="material-symbols:logout-rounded"
               color="error"
             />
+            <DrawerMenuItemLabel
+              v-motion-fade
+              label="Log Out"
+              color="error"
+            />
           </DrawerMenuItem>
-        </Tooltip>
-      </li>
-    </ul>
-  </nav>
+
+          <Tooltip
+            v-else
+            content="Log Out"
+            position="right"
+          >
+            <DrawerMenuItem route="/login">
+              <DrawerMenuItemIcon
+                icon="material-symbols:logout-rounded"
+                color="error"
+              />
+            </DrawerMenuItem>
+          </Tooltip>
+        </li>
+      </ul>
+    </nav>
+  </ScrollArea>
 </template>
 
 <style scoped></style>

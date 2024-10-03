@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconButton } from '@/components/cui'
+import { IconButton } from '@/components/lib'
 
 const isDrawerOpen = defineModel<boolean>('isDrawerOpen')
 const isDrawerXLOpen = defineModel<boolean>('isDrawerXLOpen')

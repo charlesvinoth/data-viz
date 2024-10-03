@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconButton, PingIndicator } from '@/components/cui'
+import { IconButton, PingIndicator } from '@/components/lib'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconButton, Menu, MenuItem, MenuNested } from '@/components/cui'
+import { IconButton, Menu, MenuItem, MenuNested } from '@/components/lib'
 
 interface ChartWrapperMenuProps {
   downloadChart(type: 'png' | 'jpg'): void

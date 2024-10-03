@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Sheet } from '@/components/cui'
+import { Sheet } from '@/components/lib'
 import DrawerLogo from './DrawerLogo.vue'
 import DrawerMenu from './DrawerMenu.vue'
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon } from '@/components/cui'
+import { Icon } from '@/components/lib'
 
 interface DrawerMenuIconProps {
   color?: 'default' | 'error'

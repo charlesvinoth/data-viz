@@ -21,6 +21,8 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "echarts": "^5.5.1",
+    "overlayscrollbars": "^2.10.0",
+    "overlayscrollbars-vue": "^0.5.9",
     "pinia": "^2.2.4",
     "tailwind-merge": "^2.5.2",
     "vue": "^3.5.10",

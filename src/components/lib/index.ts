@@ -14,6 +14,7 @@ import MenuNested from './menu/MenuNested.vue'
 import MenuSeparator from './menu/MenuSeparator.vue'
 import MenuTriggerItem from './menu/MenuTriggerItem.vue'
 import PingIndicator from './PingIndicator.vue'
+import ScrollArea from './ScrollArea.vue'
 import Sheet from './Sheet.vue'
 import Tooltip from './Tooltip.vue'
 
@@ -34,6 +35,7 @@ export {
   MenuSeparator,
   MenuTriggerItem,
   PingIndicator,
+  ScrollArea,
   Sheet,
   Tooltip,
 }

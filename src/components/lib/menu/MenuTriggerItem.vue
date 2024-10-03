@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Menu } from '@ark-ui/vue'
-import { Icon } from '@/components/cui'
+import { Icon } from '@/components/lib'
 
 interface MenuTriggerItemProps {
   icon?: string
