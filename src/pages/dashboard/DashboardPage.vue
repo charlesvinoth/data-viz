@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { BarChart, type BarChartSeries } from '@/components/cui'
+import { BarChart } from '@/components/cui'
+import type { BarChartSeries } from '@/components/cui/types'
 
 const barChartseries: BarChartSeries[] = [
   // {

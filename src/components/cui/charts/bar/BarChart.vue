@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import VChart from 'vue-echarts'
-import { ChartWrapper } from '..'
+import ChartWrapper from '../chart-wrapper/ChartWrapper.vue'
 import type { BarChartProps } from './types'
 import useBarChart from './useBarChart'
 

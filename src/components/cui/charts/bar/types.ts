@@ -1,4 +1,4 @@
-import type { ChartCommonProps } from '..'
+import type { ChartCommonProps } from '../types'
 
 export interface BarChartData {
   x: string

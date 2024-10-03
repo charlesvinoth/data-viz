@@ -4,8 +4,8 @@ import { ref } from 'vue'
 import { IconButton } from '@/components/cui'
 import { cn } from '@/utils/cn'
 import downloadChartAsImage from '@/utils/downloadChartAsImage'
-import type { ChartWrapperProps } from '../types'
 import ChartWrapperMenu from './ChartWrapperMenu.vue'
+import type { ChartWrapperProps } from './types'
 
 const { chartRef, hideWrapper, hideHeader, title, description } = defineProps<ChartWrapperProps>()
 
