@@ -5,7 +5,7 @@ import { Button, LogoMark } from '@/components/lib'
 <template>
   <div
     class="flex flex-col items-center justify-center px-6"
-    :style="{ height: 'calc(100vh - 56px)' }"
+    :style="{ height: 'calc(100dvh - 56px)' }"
   >
     <div class="relative mb-6 size-24">
       <LogoMark class="opacity-20" />

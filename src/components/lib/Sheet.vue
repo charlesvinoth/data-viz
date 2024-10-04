@@ -13,7 +13,7 @@ const model = defineModel<boolean>({ default: false })
 const classNames = {
   backdrop: 'fixed inset-0 z-10 h-screen w-screen bg-gray-500/60 transition-opacity',
   positioner: 'fixed inset-0 z-20',
-  content: cn('absolute overflow-hidden bg-white dark:bg-gray-900', {
+  content: cn('absolute bg-white dark:bg-gray-900', {
     'left-0 top-0 h-screen': position === 'left',
     'right-0 top-0 h-screen': position === 'right',
   }),
