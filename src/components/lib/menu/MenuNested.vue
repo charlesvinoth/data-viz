@@ -8,6 +8,7 @@ interface MenuNestedProps {
   icon?: string
   label: string
   value: string
+  isDense?: boolean
 }
 
 defineProps<MenuNestedProps>()
@@ -25,7 +26,10 @@ const onOpenChange = (details: MenuOpenChangeDetails) => (isMenuOpen.value = det
       :label="label"
     />
 
-    <MenuContent v-if="isMenuOpen">
+    <MenuContent
+      v-if="isMenuOpen"
+      :is-dense="isDense"
+    >
       <template #default>
         <slot />
       </template>

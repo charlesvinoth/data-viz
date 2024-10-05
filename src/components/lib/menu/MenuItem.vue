@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Menu } from '@ark-ui/vue'
 import { Icon } from '@/components/lib'
-import { cn } from '@/utils/cn'
+import cn from '@/utils/cn'
 
 interface MenuItemProps {
   color?: 'default' | 'error'

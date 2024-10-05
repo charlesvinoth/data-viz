@@ -6,49 +6,41 @@ import type { BarChartProps } from './types'
 import useBarChart from './useBarChart'
 
 const {
-  hideWrapper = false,
-  hideHeader = false,
-  title,
-  description,
-  height = 256,
-  isStacked = false,
+  height = 320,
+  hideLegend,
+  hideXAxis,
+  hideXAxisSplitLines,
+  hideYAxis,
+  hideYAxisSplitLines,
+  isStacked,
   markLines,
-  maxValue,
+  yMax,
   orientation = 'vertical',
   series,
-  showLegend = false,
-  showXAxis = true,
-  showXAxisSplitLines = false,
-  showYAxis = true,
-  showYAxisSplitLines = false,
-  trigger = 'item',
+  title,
+  description,
 } = defineProps<BarChartProps>()
 
 const chartRef = ref<typeof VChart | null>(null)
 
 const { barChartOptions } = useBarChart({
+  hideLegend,
+  hideXAxis,
+  hideXAxisSplitLines,
+  hideYAxis,
+  hideYAxisSplitLines,
   isStacked,
   markLines,
-  maxValue,
+  yMax,
   orientation,
   series,
-  showLegend,
-  showXAxis,
-  showXAxisSplitLines,
-  showYAxis,
-  showYAxisSplitLines,
-  trigger,
+  title,
+  description,
 })
 </script>
 
 <template>
-  <ChartWrapper
-    :chart-ref="chartRef"
-    :hide-wrapper="hideWrapper"
-    :hide-header="hideHeader"
-    :title="title"
-    :description="description"
-  >
+  <ChartWrapper :chart-ref="chartRef">
     <VChart
       ref="chartRef"
       autoresize

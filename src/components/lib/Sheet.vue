@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Dialog } from '@ark-ui/vue'
-import { cn } from '@/utils/cn'
+import cn from '@/utils/cn'
 
 interface SheetProps {
   position?: 'left' | 'right'

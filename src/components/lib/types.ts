@@ -1,3 +1,3 @@
-import type { BarChartSeries } from './charts/bar/types'
+import type { ChartSeries } from './charts/types'
 
-export type { BarChartSeries }
+export type { ChartSeries }

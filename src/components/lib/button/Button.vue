@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@/components/lib'
-import { cn } from '@/utils/cn'
+import cn from '@/utils/cn'
 import baseButtonStyles from './styles'
 import type { ButtonColor, ButtonSize, ButtonVariant } from './types'
 

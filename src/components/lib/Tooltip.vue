@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from '@ark-ui/vue'
-import { cn } from '@/utils/cn'
+import cn from '@/utils/cn'
 
 type Placement = 'end' | 'start'
 type Side = 'top' | 'right' | 'bottom' | 'left'
@@ -67,4 +67,8 @@ const classNames = {
   </Tooltip.Root>
 </template>
 
-<style scoped></style>
+<style>
+[data-part='arrow'] {
+  --arrow-size: 8px;
+}
+</style>

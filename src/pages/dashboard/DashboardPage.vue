@@ -1,8 +1,73 @@
 <script setup lang="ts">
 import { BarChart } from '@/components/lib'
-import type { BarChartSeries } from '@/components/lib/types'
+import type { ChartSeries } from '@/components/lib/types'
 
-const barChartseries: BarChartSeries[] = [
+// const barChartseries: ChartSeries[] = [
+//   {
+//     name: '2018',
+//     data: [
+//       { x: 'Q1', y: 2002 },
+//       { x: 'Q2', y: 2484 },
+//       { x: 'Q3', y: 1099 },
+//       { x: 'Q4', y: 535 },
+//     ],
+//   },
+//   {
+//     name: '2019',
+//     data: [
+//       { x: 'Q1', y: 2283 },
+//       { x: 'Q2', y: 2371 },
+//       { x: 'Q3', y: 2411 },
+//       { x: 'Q4', y: 555 },
+//     ],
+//   },
+//   {
+//     name: '2020',
+//     data: [
+//       { x: 'Q1', y: 1157 },
+//       { x: 'Q2', y: 2087 },
+//       { x: 'Q3', y: 1404 },
+//       { x: 'Q4', y: 1857 },
+//     ],
+//   },
+//   {
+//     name: '2021',
+//     data: [
+//       { x: 'Q1', y: 1336 },
+//       { x: 'Q2', y: 2295 },
+//       { x: 'Q3', y: 788 },
+//       { x: 'Q4', y: 1321 },
+//     ],
+//   },
+//   {
+//     name: '2022',
+//     data: [
+//       { x: 'Q1', y: 1875 },
+//       { x: 'Q2', y: 1000 },
+//       { x: 'Q3', y: 2244 },
+//       { x: 'Q4', y: 1737 },
+//     ],
+//   },
+//   {
+//     name: '2023',
+//     data: [
+//       { x: 'Q1', y: 1382 },
+//       { x: 'Q2', y: 678 },
+//       { x: 'Q3', y: 1464 },
+//       { x: 'Q4', y: 828 },
+//     ],
+//   },
+//   {
+//     name: '2024',
+//     data: [
+//       { x: 'Q1', y: 1914 },
+//       { x: 'Q2', y: 2185 },
+//       { x: 'Q3', y: 1474 },
+//       { x: 'Q4', y: 1329 },
+//     ],
+//   },
+// ]
+const barChartseries: ChartSeries[] = [
   // {
   //   name: '2018',
   //   data: [
@@ -71,23 +136,23 @@ const barChartseries: BarChartSeries[] = [
   //     { x: 'Dec', y: 1100 },
   //   ],
   // },
-  // {
-  //   name: '2022',
-  //   data: [
-  //     { x: 'Jan', y: 600 },
-  //     { x: 'Feb', y: 650 },
-  //     { x: 'Mar', y: 700 },
-  //     { x: 'Apr', y: 800 },
-  //     { x: 'May', y: 900 },
-  //     { x: 'Jun', y: 850 },
-  //     { x: 'Jul', y: 750 },
-  //     { x: 'Aug', y: 900 },
-  //     { x: 'Sep', y: 950 },
-  //     { x: 'Oct', y: 1050 },
-  //     { x: 'Nov', y: 1150 },
-  //     { x: 'Dec', y: 1200 },
-  //   ],
-  // },
+  {
+    name: '2022',
+    data: [
+      { x: 'Jan', y: 600 },
+      { x: 'Feb', y: 650 },
+      { x: 'Mar', y: 700 },
+      { x: 'Apr', y: 800 },
+      { x: 'May', y: 900 },
+      { x: 'Jun', y: 850 },
+      { x: 'Jul', y: 750 },
+      { x: 'Aug', y: 900 },
+      { x: 'Sep', y: 950 },
+      { x: 'Oct', y: 1050 },
+      { x: 'Nov', y: 1150 },
+      { x: 'Dec', y: 1200 },
+    ],
+  },
   {
     name: '2023',
     data: [
@@ -126,22 +191,13 @@ const barChartseries: BarChartSeries[] = [
 </script>
 
 <template>
-  <div class="p-4">
+  <div class="mx-auto p-4">
     <BarChart
       title="Sales report"
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
       :series="barChartseries"
-      :height="360"
-      orientation="vertical"
-      :mark-lines="[
-        {
-          name: 'Target',
-          value: 750,
-        },
-      ]"
-      :show-legend="true"
-      :show-x-axis-split-lines="true"
-      :show-y-axis-split-lines="true"
+      hide-x-axis-split-lines
+      hide-y-axis-split-lines
     />
   </div>
 </template>

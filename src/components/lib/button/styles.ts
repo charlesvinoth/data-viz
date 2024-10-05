@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 import type { ClassValue } from 'clsx'
-import { cn } from '@/utils/cn'
+import cn from '@/utils/cn'
 import type { ButtonColor, ButtonVariant } from './types'
 
 export default function baseButtonStyles(
